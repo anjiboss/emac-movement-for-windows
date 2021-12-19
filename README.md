@@ -2,6 +2,11 @@
 
 ## This Is Script That Have Only Cursor Movement of Emac KeyBinding for AutoHotKey
 
+## How to use
+- Download [AutoHotkey](https://www.autohotkey.com/) and Install it.
+- Clone this repo and open emacs.ahk
+- No alert/notification but you are ready to go
+
 ## Supported keybindings
 
 <table>
