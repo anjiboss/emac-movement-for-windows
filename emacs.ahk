@@ -5,6 +5,7 @@
 #UseHook
 
 ; The following line is a contribution of NTEmacs wiki http://www49.atwiki.jp/ntemacs/pages/20.html
+; All I do is clear unused key and change from ctrl key to CapsLock key
 SetKeyDelay 0
 
 ; turns to be 1 when ctrl-x is pressed
@@ -219,49 +220,59 @@ scroll_down()
     Send {PgDn}
   Return
 }
+CapsLock::
+    KeyWait, CapsLock                                                   ; Wait forever until Capslock is released.
+    KeyWait, CapsLock, D T0.2                                           ; ErrorLevel = 1 if CapsLock not down within 0.2 seconds.
+    if ((ErrorLevel = 0) && (A_PriorKey = "CapsLock") )                 ; Is a double tap on CapsLock?
+        {
+        SetCapsLockState, % GetKeyState("CapsLock","T") ? "Off" : "On"  ; Toggle the state of CapsLock LED
+        }
+return
 
 
 
-^a::
+
+
+CapsLock & a::
   If is_target()
     Send %A_ThisHotkey%
   Else
     move_beginning_of_line()
   Return
-^e::
+CapsLock & e::
   If is_target()
     Send %A_ThisHotkey%
   Else
     move_end_of_line()
   Return
-^n::
+CapsLock & n::
   If is_target()
     Send %A_ThisHotkey%
   Else
     next_line()
   Return
-^p::
+CapsLock & p::
   If is_target()
     Send %A_ThisHotkey%
   Else
     previous_line()
   Return
 
-^k::
+CapsLock & k::
   If is_target()
     Send %A_ThisHotkey%
   Else
     kill_line()
   Return
 
-^b::
+CapsLock & b::
   If is_target()
     Send %A_ThisHotkey%
   Else
     backward_char()
   Return
 
-^f::
+CapsLock & f::
   If is_target()
     Send %A_ThisHotkey%
   Else
