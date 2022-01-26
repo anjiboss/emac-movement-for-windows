@@ -5,7 +5,6 @@
 #UseHook
 
 ; The following line is a contribution of NTEmacs wiki http://www49.atwiki.jp/ntemacs/pages/20.html
-; All I do is clear unused key and change from ctrl key to CapsLock key
 SetKeyDelay 0
 
 ; turns to be 1 when ctrl-x is pressed
