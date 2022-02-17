@@ -2,6 +2,8 @@
 
 ## This Is Script That Have Only Cursor Movement of Emac KeyBinding for AutoHotKey
 
+## You must have [AutoHotKey](https://www.autohotkey.com/) Installed In Your Computer to use this script
+
 ## Supported keybindings
 
 <table>
