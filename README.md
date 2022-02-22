@@ -4,6 +4,10 @@
 
 ## You must have [AutoHotKey](https://www.autohotkey.com/) Installed In Your Computer to use this script
 
+### How To Use
+- Download as zip or clone.
+- Double Click to emac.ahk.
+
 ## Supported keybindings
 
 <table>
